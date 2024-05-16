@@ -1,35 +1,25 @@
-import React from 'react';
-import FormularioEntrega from './paginas/FormularioEntrega';
-import { message } from 'antd';
+import logo from './logo.svg';
+import './App.css';
 
-const enviarDadosParaServidor = async (values) => {
-  try {
-    const response = await fetch('http://sistemagestao-server.vercel.app:5000/salvar-dados', { // Adicionando 'http://' ao início da URL
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(values),
-    });
-    const data = await response.json();
-    if (response.ok) {
-      message.success(data.message);
-    } else {
-      throw new Error(data.error);
-    }
-  } catch (error) {
-    console.error('Erro ao enviar dados para o servidor:', error.message);
-    throw error;
-  }
-};
-
-const App = () => {
+function App() {
   return (
     <div className="App">
-      <h1>Formulário de Entrega</h1>
-      <FormularioEntrega enviarDados={enviarDadosParaServidor} />
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
-};
+}
 
 export default App;
