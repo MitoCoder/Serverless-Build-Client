@@ -4,7 +4,7 @@ import { message } from 'antd';
 
 const enviarDadosParaServidor = async (values) => {
   try {
-    const response = await fetch('sistemagestao-server.vercel.app:5000/salvar-dados', {
+    const response = await fetch('http://sistemagestao-server.vercel.app:5000/salvar-dados', { // Adicionando 'http://' ao início da URL
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
