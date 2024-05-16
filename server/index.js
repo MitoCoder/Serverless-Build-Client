@@ -1,19 +1,9 @@
-const express = require('express');
-const db = require('../client/src/banco/database'); // Importar o arquivo database.js
-const app = express();
+const express = require ('express')
+const app = express()
 
-// Rotas da sua aplicação
-app.get('/', (req, res) => {
-    // Exemplo de consulta ao banco de dados
-    db.all('SELECT * FROM entrega', (err, rows) => {
-        if (err) {
-            return res.status(500).json({ error: err.message });
-        }
-        res.json({ data: rows });
-    });
-});
+app.use("/", (req, res) => {
+    res.send("Server is running");
+  }); 
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-    console.log(`Server started on port ${PORT}`);
-});
+app.listen(5000, console.log("Server started on PORT 5000"));
+ 
