@@ -5,7 +5,7 @@ const app = express();
 // Rotas da sua aplicação
 app.get('/', (req, res) => {
     // Exemplo de consulta ao banco de dados
-    db.all('SELECT * FROM tabela', (err, rows) => {
+    db.all('SELECT * FROM entrega', (err, rows) => {
         if (err) {
             return res.status(500).json({ error: err.message });
         }
