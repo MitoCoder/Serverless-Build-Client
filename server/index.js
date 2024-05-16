@@ -1,6 +1,7 @@
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
 const bodyParser = require('body-parser');
+const path = require('path'); // Adicionando a importação do módulo path
 
 const app = express();
 const PORT = process.env.PORT || 5000;
