@@ -6,7 +6,7 @@ const sqlite3 = require('sqlite3').verbose();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const dbPath = path.resolve(__dirname, '.', 'src', 'banco', 'bancogeral.db');
+const dbPath = path.resolve(__dirname, 'src', 'banco', 'bancogeral.db');
 
 const db = new sqlite3.Database(dbPath, (err) => {
   if (err) {
