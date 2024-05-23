@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+         Unfortunately, I cannot release the management plus system repository, but I left the bank form that I created for it
         </p>
         <a
           className="App-link"
