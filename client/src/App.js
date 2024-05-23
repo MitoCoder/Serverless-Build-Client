@@ -11,11 +11,11 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://github.com/MitoCoder"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          With my thanks Edvam Santos
         </a>
       </header>
     </div>
